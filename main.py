@@ -118,8 +118,8 @@ class CodeReviewAgent:
         self.save_review(review_comments)
 
 if __name__ == "__main__":
-    repo_path = "../../obrio/obrio-test-task/"
-    branch_name = "improve_insights"
+    repo_path = "./sample_repo"
+    branch_name = "feture_branch"
     openai_api_key = os.getenv("OPENAI_API_KEY")
     hf_api_key = os.getenv("HUGGINGFACEHUB_API_TOKEN")
     agent = CodeReviewAgent(repo_path, branch_name, provider="huggingface", llm_model="tiiuae/falcon-7b-instruct", hf_api_key=hf_api_key)
